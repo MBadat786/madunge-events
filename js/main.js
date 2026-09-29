@@ -940,3 +940,122 @@ if (datePicker) {
     renderCalendar();
 
 }
+
+
+/* =========================================================
+   MADUNGE ENQUIRY FORM
+   ========================================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const projectForm = document.getElementById("projectForm");
+
+    if (!projectForm) return;
+
+
+    projectForm.addEventListener("submit", (event) => {
+
+        event.preventDefault();
+
+
+        /* -----------------------------------------
+           VALIDATE FORM
+        ----------------------------------------- */
+
+        if (!projectForm.checkValidity()) {
+
+            projectForm.reportValidity();
+
+            return;
+
+        }
+
+
+        /* -----------------------------------------
+           GET FORM DETAILS
+        ----------------------------------------- */
+
+        const name =
+            document.getElementById("name").value.trim();
+
+        const company =
+            document.getElementById("company").value.trim();
+
+        const email =
+            document.getElementById("email").value.trim();
+
+        const phone =
+            document.getElementById("phone").value.trim();
+
+        const eventType =
+            document.getElementById("eventType").value;
+
+        const eventDate =
+            document.getElementById("eventDate").value;
+
+        const eventLocation =
+            document.getElementById("eventLocation").value.trim();
+
+        const guests =
+            document.getElementById("guests").value;
+
+        const message =
+            document.getElementById("message").value.trim();
+
+
+        /* -----------------------------------------
+           EMAIL SUBJECT
+        ----------------------------------------- */
+
+        const subject =
+            `New Project Enquiry - ${name}`;
+
+
+        /* -----------------------------------------
+           BUILD EMAIL
+        ----------------------------------------- */
+
+        let emailBody =
+`Hello Madunge Events,
+
+I'd like to enquire about a project.
+
+PROJECT DETAILS
+
+Project Type: ${eventType || "Not specified"}
+Event Date: ${eventDate || "Not specified"}
+Event Location: ${eventLocation || "Not specified"}
+Approximate Guests: ${guests || "Not specified"}
+
+CONTACT DETAILS
+
+Name: ${name}
+Company / Organisation: ${company || "Not specified"}
+Email: ${email}
+Phone: ${phone || "Not specified"}
+
+PROJECT DESCRIPTION
+
+${message}
+
+Kind regards,
+${name}`;
+
+
+        /* -----------------------------------------
+           OPEN EMAIL
+        ----------------------------------------- */
+
+        const madungeEmail =
+            "sales@madunge.co.za";
+
+
+        const mailtoURL =
+            `mailto:${madungeEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+
+
+        window.location.href = mailtoURL;
+
+    });
+
+});
