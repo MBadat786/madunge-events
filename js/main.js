@@ -27,61 +27,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-    /* =====================================================
-       PAGE LOADER
-       ===================================================== */
+    
+/* =====================================================
+   PAGE LOADER
+   ===================================================== */
 
-    window.addEventListener("load", () => {
+window.addEventListener("load", () => {
 
+    // Allow the logo assembly animation to finish
+    setTimeout(() => {
+
+        if (loader) {
+            loader.classList.add("loaded");
+        }
+
+        // Reveal hero content after the loader begins fading
         setTimeout(() => {
 
-            if (loader) {
-                loader.classList.add("loaded");
-            }
+            document
+                .querySelectorAll(".hero .reveal")
+                .forEach((element, index) => {
 
-            /*
-             Start hero reveal after loader leaves.
-            */
+                    setTimeout(() => {
+                        element.classList.add("visible");
+                    }, index * 140);
 
-            setTimeout(() => {
+                });
 
-                document
-                    .querySelectorAll(".hero .reveal")
-                    .forEach((element, index) => {
+        }, 250);
 
-                        setTimeout(() => {
-                            element.classList.add("visible");
-                        }, index * 140);
-
-                    });
-
-            }, 250);
-
-        }, 1100);
-
-
-        /* =========================================================
-   IMAGE PERFORMANCE
-   ========================================================= */
-
-const siteImages = document.querySelectorAll("img");
-
-siteImages.forEach((image, index) => {
-
-    // Keep the first important image loading immediately
-    if (index === 0) {
-        image.loading = "eager";
-        image.fetchPriority = "high";
-        return;
-    }
-
-    image.loading = "lazy";
-    image.decoding = "async";
+    }, 1100);
 
 });
-
-    });
-
 
 
     /* =====================================================

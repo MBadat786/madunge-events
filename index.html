@@ -27,29 +27,15 @@
 
 <body>
 
-    <!-- =====================================================
-         PAGE LOADER
-    ====================================================== -->
-
-    <div class="page-loader" id="pageLoader">
-
-        <div class="loader-inner">
-
-            <span class="loader-eyebrow">
-                Events & Projects
-            </span>
-
-            <div class="loader-brand">
-                MADUNGE
-            </div>
-
-            <div class="loader-line">
-                <span></span>
-            </div>
-
-        </div>
-
+   
+<!-- PAGE LOADER -->
+<div class="page-loader" id="pageLoader">
+    <div class="loader-inner">
+        <span class="loader-eyebrow">Events & Projects</span>
+        <div class="loader-brand">MADUNGE</div>
+        <div class="loader-line"><span></span></div>
     </div>
+</div>
 
 
     <!-- =====================================================
@@ -123,88 +109,121 @@
 
 
 
-    <main>
 
 
         <!-- =================================================
              HERO
         ================================================== -->
 
-        <section class="hero">
+        
+<!-- HERO -->
+<section class="hero">
 
-            <video class="hero-video"
-                   autoplay
-                   muted
-                   loop
-                   playsinline>
+    <video class="hero-video" autoplay muted loop playsinline>
+        <source src="assets/videos/hero-event.mp4" type="video/mp4">
+    </video>
 
-                <source src="assets/videos/hero-event.mp4"
-                        type="video/mp4">
+    <div class="hero-overlay"></div>
+    <div class="hero-grain"></div>
 
-            </video>
+    <div class="hero-content">
 
+        <p class="hero-kicker reveal">
+            EVENTS • INFRASTRUCTURE • PROJECT DELIVERY
+        </p>
 
-            <div class="hero-overlay"></div>
+        <h1 class="hero-title">
+            <span class="reveal">One accountable</span>
+            <span class="hero-title-italic reveal">partner.</span>
+            <span class="reveal">From vision to delivery.</span>
+        </h1>
 
-            <div class="hero-grain"></div>
+        <div class="hero-bottom reveal">
 
+            <p>
+                Madunge Events and Projects brings planning,
+                infrastructure, logistics, hospitality and project
+                coordination together to deliver experiences that matter.
+                Proudly South African, with the capability to deliver
+                projects nationwide.
+            </p>
 
-            <div class="hero-content">
+            <a href="portfolio.html" class="circle-link"
+               aria-label="Explore our work">
+                <span>Explore<br>our work</span>
+                <i class="fa-solid fa-arrow-down"></i>
+            </a>
 
-                <p class="hero-kicker reveal">
-                    Event Management • Experiences • Projects
-                </p>
+        </div>
 
+    </div>
 
-                <h1 class="hero-title">
+    <div class="hero-scroll">
+        <span>Scroll to discover</span>
+        <div></div>
+    </div>
 
-                    <span class="reveal">
-                        We don't simply
-                    </span>
+</section>
 
-                    <span class="hero-title-italic reveal">
-                        plan events.
-                    </span>
+ 
+<!-- FEATURED EVENT PHOTOGRAPHY -->
+<section class="featured-photography section">
 
-                    <span class="reveal">
-                        We create experiences.
-                    </span>
+    <div class="section-container">
 
-                </h1>
+        <div class="featured-photo-heading reveal">
+            <p class="section-eyebrow">A GLIMPSE OF OUR WORK</p>
+            <h2>Experiences designed<br>to <em>leave a lasting impression.</em></h2>
+            <p>
+                From refined event settings to large-scale productions,
+                we bring every element together with care and precision.
+            </p>
+        </div>
 
+        <div class="featured-photo-grid">
 
-                <div class="hero-bottom reveal">
+            <a href="portfolio.html" class="featured-photo featured-photo-large">
+                <img src="assets/images/IMG_4247.JPG"
+                     alt="Concert and live event production"
+                     loading="lazy">
+                <span class="featured-photo-caption">
+                    <span>01 / LIVE EXPERIENCES</span>
+                    <strong>Big moments. Seamless delivery.</strong>
+                </span>
+            </a>
 
-                    <p>
-                        From intimate celebrations to large-scale
-                        productions, Madunge transforms spaces into
-                        memorable experiences.
-                    </p>
+            <a href="gallery.html" class="featured-photo">
+                <img src="assets/images/setup1.jpg"
+                     alt="Madunge event setup"
+                     loading="lazy">
+                <span class="featured-photo-caption">
+                    <span>02 / EVENT SETTINGS</span>
+                    <strong>Every detail matters.</strong>
+                </span>
+            </a>
 
+            <a href="gallery.html" class="featured-photo">
+                <img src="assets/images/IMG_0010.JPG"
+                     alt="Event setup and seating"
+                     loading="lazy">
+                <span class="featured-photo-caption">
+                    <span>03 / EVENT DESIGN</span>
+                    <strong>Spaces made memorable.</strong>
+                </span>
+            </a>
 
-                    <a href="portfolio.html"
-                       class="circle-link"
-                       aria-label="Explore our work">
+        </div>
 
-                        <span>
-                            Explore<br>our work
-                        </span>
+        <div class="featured-photo-link">
+            <a href="portfolio.html">Discover our work
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
 
-                        <i class="fa-solid fa-arrow-down"></i>
+    </div>
 
-                    </a>
+</section>
 
-                </div>
-
-            </div>
-
-
-            <div class="hero-scroll">
-                <span>Scroll to discover</span>
-                <div></div>
-            </div>
-
-        </section>
 
 
 
@@ -212,58 +231,58 @@
              INTRODUCTION
         ================================================== -->
 
-        <section class="intro section">
+        
+<!-- INTRODUCTION -->
+<section class="intro section">
 
-            <div class="container">
+    <div class="container">
 
-                <div class="section-label reveal">
-                    <span>01</span>
-                    <p>Who we are</p>
-                </div>
+        <div class="section-label reveal">
+            <span>01</span>
+            <p>Who we are</p>
+        </div>
 
+        <div class="intro-grid">
 
-                <div class="intro-grid">
+            <div class="intro-heading">
+                <h2 class="display-heading reveal">
+                    One partner.
+                    <em>Integrated delivery.</em>
+                </h2>
+            </div>
 
-                    <div class="intro-heading">
+            <div class="intro-copy reveal">
 
-                        <h2 class="display-heading reveal">
-                            Built to create
-                            <em>remarkable</em>
-                            moments.
-                        </h2>
+                <p class="large-copy">
+                    Madunge Events and Projects is a proudly South African,
+                    100% Black-owned events, infrastructure and project
+                    management company headquartered in Durban,
+                    KwaZulu-Natal.
+                </p>
 
-                    </div>
+                <p>
+                    We work with corporate organisations, government
+                    institutions, brands, event professionals and private
+                    clients to turn plans into professionally delivered
+                    experiences. Our integrated approach brings planning,
+                    event infrastructure, logistics, hospitality,
+                    activations and project coordination together through
+                    one accountable partner.
+                </p>
 
-
-                    <div class="intro-copy reveal">
-
-                        <p class="large-copy">
-                            Madunge Events & Projects delivers
-                            distinctive event experiences through
-                            considered design, meticulous planning
-                            and professional execution.
-                        </p>
-
-                        <p>
-                            From marquee solutions and exhibitions
-                            to décor, furniture and complete event
-                            management, we bring together the
-                            elements required to transform an idea
-                            into an experience.
-                        </p>
-
-                        <a href="about.html" class="text-link">
-                            Discover Madunge
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-
-                    </div>
-
-                </div>
+                <a href="about.html" class="text-link">
+                    Discover Madunge
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
 
             </div>
 
-        </section>
+        </div>
+
+    </div>
+
+</section>
+
 
 
 
@@ -271,42 +290,42 @@
              SCALE / MARQUEE FEATURE
         ================================================== -->
 
-        <section class="scale-feature">
+       
+<!-- SCALE / MARQUEE FEATURE -->
+<section class="scale-feature">
 
-            <div class="scale-image reveal-image">
+    <div class="scale-image reveal-image">
+        <img src="assets/images/corporate-event.jpg"
+             alt="Large-scale event infrastructure and marquee setup">
+    </div>
 
-                <img src="assets/images/marquee-aerial-01.webp"
-                     alt="Large-scale Madunge marquee event setup">
+    <div class="scale-content">
 
-            </div>
+        <span class="eyebrow reveal">
+            Built for scale
+        </span>
 
+        <h2 class="reveal">
+            Infrastructure,
+            coordination and
+            <em>execution.</em>
+        </h2>
 
-            <div class="scale-content">
+        <p class="reveal">
+            From premium marquees and event infrastructure to
+            supplier coordination, logistics and on-site management,
+            we bring the essential elements together to deliver
+            functional, professional event environments.
+        </p>
 
-                <span class="eyebrow reveal">
-                    Built for scale
-                </span>
+        <a href="services.html" class="light-button reveal">
+            Explore our capabilities
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
 
-                <h2 class="reveal">
-                    From an empty field
-                    to an extraordinary
-                    <em>destination.</em>
-                </h2>
+    </div>
 
-                <p class="reveal">
-                    Large-format event infrastructure,
-                    marquee solutions and complete environments
-                    designed around the occasion.
-                </p>
-
-                <a href="services.html" class="light-button reveal">
-                    Explore our capabilities
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-
-            </div>
-
-        </section>
+</section>
 
 
 
@@ -314,148 +333,107 @@
              SERVICES
         ================================================== -->
 
-        <section class="services-preview section">
+       
+<!-- SERVICES -->
+<section class="services-preview section">
 
-            <div class="container">
+    <div class="container">
 
-                <div class="section-label reveal">
-                    <span>02</span>
-                    <p>What we do</p>
-                </div>
+        <div class="section-label reveal">
+            <span>02</span>
+            <p>What we do</p>
+        </div>
 
+        <div class="services-heading">
 
-                <div class="services-heading">
+            <h2 class="display-heading reveal">
+                Multiple capabilities.
+                <br>
+                <em>One accountable partner.</em>
+            </h2>
 
-                    <h2 class="display-heading reveal">
-                        Every detail.
-                        <br>
-                        <em>One vision.</em>
-                    </h2>
+            <p class="reveal">
+                Services can be commissioned individually or combined
+                into an integrated solution tailored to your objectives,
+                audience, budget and timeline.
+            </p>
 
-                    <p class="reveal">
-                        A multidisciplinary approach to events,
-                        environments and experiences.
-                    </p>
+        </div>
 
-                </div>
+        <div class="service-list">
 
+            <a href="services.html" class="service-row reveal">
+                <span class="service-number">01</span>
+                <h3>Events & Experiences</h3>
+                <p>
+                    Corporate events, conferences, exhibitions,
+                    weddings, celebrations, festivals and launches.
+                </p>
+                <span class="service-arrow">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </span>
+            </a>
 
-                <div class="service-list">
+            <a href="services.html" class="service-row reveal">
+                <span class="service-number">02</span>
+                <h3>Infrastructure & Rentals</h3>
+                <p>
+                    Stretch tents, frame marquees, furniture,
+                    mobile bars, flooring, staging and event logistics.
+                </p>
+                <span class="service-arrow">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </span>
+            </a>
 
+            <a href="services.html" class="service-row reveal">
+                <span class="service-number">03</span>
+                <h3>Marketing & Activations</h3>
+                <p>
+                    Brand experiences, promotional campaigns,
+                    product sampling, sponsorships and audience engagement.
+                </p>
+                <span class="service-arrow">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </span>
+            </a>
 
-                    <a href="services.html"
-                       class="service-row reveal">
+            <a href="services.html" class="service-row reveal">
+                <span class="service-number">04</span>
+                <h3>Hospitality & Guest Services</h3>
+                <p>
+                    Catering coordination, VIP experiences,
+                    guest management, accommodation and travel logistics.
+                </p>
+                <span class="service-arrow">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </span>
+            </a>
 
-                        <span class="service-number">01</span>
+            <a href="services.html" class="service-row reveal">
+                <span class="service-number">05</span>
+                <h3>Project & Business Management</h3>
+                <p>
+                    Project planning, budget monitoring, supplier
+                    coordination, stakeholder management and operational support.
+                </p>
+                <span class="service-arrow">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </span>
+            </a>
 
-                        <h3>Event Management</h3>
+        </div>
 
-                        <p>
-                            Planning, coordination and execution
-                            from concept through completion.
-                        </p>
+        <div class="services-button-wrap reveal">
+            <a href="services.html" class="dark-button">
+                View all services
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
 
-                        <span class="service-arrow">
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
+    </div>
 
-                    </a>
-
-
-                    <a href="services.html"
-                       class="service-row reveal">
-
-                        <span class="service-number">02</span>
-
-                        <h3>Marquees & Infrastructure</h3>
-
-                        <p>
-                            Event structures and environments
-                            created for celebrations of every scale.
-                        </p>
-
-                        <span class="service-arrow">
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-
-                    </a>
-
-
-                    <a href="services.html"
-                       class="service-row reveal">
-
-                        <span class="service-number">03</span>
-
-                        <h3>Décor & Styling</h3>
-
-                        <p>
-                            Thoughtful spaces, tablescapes and
-                            details shaped around your vision.
-                        </p>
-
-                        <span class="service-arrow">
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-
-                    </a>
-
-
-                    <a href="services.html"
-                       class="service-row reveal">
-
-                        <span class="service-number">04</span>
-
-                        <h3>Exhibitions</h3>
-
-                        <p>
-                            Professional environments for brands,
-                            organisations and public experiences.
-                        </p>
-
-                        <span class="service-arrow">
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-
-                    </a>
-
-
-                    <a href="services.html"
-                       class="service-row reveal">
-
-                        <span class="service-number">05</span>
-
-                        <h3>Furniture & Event Hire</h3>
-
-                        <p>
-                            Curated furniture and event elements
-                            for complete, cohesive environments.
-                        </p>
-
-                        <span class="service-arrow">
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-
-                    </a>
-
-                </div>
-
-
-                <div class="services-button-wrap reveal">
-
-                    <a href="services.html"
-                       class="dark-button">
-
-                        View all services
-                        <i class="fa-solid fa-arrow-right"></i>
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
+</section>
 
 
         <!-- =================================================
@@ -599,6 +577,72 @@
 
         </section>
 
+        
+<!-- SELECTED CLIENTS & TRACK RECORD -->
+<section class="experience section">
+
+    <div class="container">
+
+        <div class="section-label reveal">
+            <span>03</span>
+            <p>Selected track record</p>
+        </div>
+
+        <div class="experience-grid">
+
+            <div>
+                <h2 class="display-heading reveal">
+                    Experience built
+                    on <em>delivery.</em>
+                </h2>
+            </div>
+
+            <div class="experience-copy">
+                <p class="large-copy reveal">
+                    Our experience spans corporate assignments,
+                    government-related projects, entertainment
+                    productions, festivals, venues and hospitality.
+                </p>
+
+                <p class="reveal">
+                    Selected organisations and projects associated
+                    with our track record include:
+                </p>
+            </div>
+
+        </div>
+
+        <div class="experience-values">
+
+            <div class="value reveal">
+                <span>01</span>
+                <h3>Corporate</h3>
+                <p>MTN, Standard Bank, Absa, McDonald's South Africa and SA Home Loans.</p>
+            </div>
+
+            <div class="value reveal">
+                <span>02</span>
+                <h3>Venues & Events</h3>
+                <p>Durban ICC, Moses Mabhida Stadium, Olive Convention Centre and Hollywoodbets Durban July marquees.</p>
+            </div>
+
+            <div class="value reveal">
+                <span>03</span>
+                <h3>Productions & Festivals</h3>
+                <p>Imbewu, Umkhokha, Netflix film productions, Grahamstown Art Festival and major music festivals.</p>
+            </div>
+
+        </div>
+
+        <p style="margin-top:28px; opacity:.75;">
+            Selected examples supplied by Madunge Events and Projects.
+            This list is not exhaustive.
+        </p>
+
+    </div>
+
+</section>
+
 
 
         <!-- =================================================
@@ -703,7 +747,7 @@
                 </div>
 
                 <div class="gallery-item tall">
-                    <img src="assets/images/event-detail-4.jpg"
+                    <img src="assets/images/IMG_0269.JPG"
                          alt="Madunge event detail">
                 </div>
 
@@ -724,51 +768,108 @@
 
             </div>
 
+
+
+            
         </section>
 
 
+<!-- CLIENT TESTIMONIAL -->
+<section class="intro section">
 
-        <!-- =================================================
-             FINAL CTA
-        ================================================== -->
+    <div class="container">
 
-        <section class="final-cta">
+        <div class="section-label reveal">
+            <span>04</span>
+            <p>Client testimonial</p>
+        </div>
 
-            <div class="final-cta-bg">
+        <div class="intro-grid">
 
-                <img src="assets/images/marquee-aerial-03.webp"
-                     alt="Madunge event">
-
-            </div>
-
-            <div class="final-cta-overlay"></div>
-
-
-            <div class="final-cta-content">
-
-                <span class="eyebrow reveal">
-                    Your event starts here
-                </span>
-
-                <h2 class="reveal">
-                    Let's create something
-                    <em>unforgettable.</em>
+            <div class="intro-heading">
+                <h2 class="display-heading reveal">
+                    Trusted to deliver
+                    <em>complex projects.</em>
                 </h2>
+            </div>
 
-                <a href="contact.html"
-                   class="cta-button reveal">
+            <div class="intro-copy reveal">
 
-                    Start a conversation
-                    <i class="fa-solid fa-arrow-right"></i>
+                <p class="large-copy">
+                    “They demonstrated professional skills in managing
+                    the various committees established to ensure that
+                    the project ran smoothly, while delivering the work
+                    within the specified time and allocated budget.”
+                </p>
 
-                </a>
+                <p>
+                    The project included community marquees, sound,
+                    catering for 400 VIP guests and 5,000 community
+                    members, transport and related services. The stated
+                    project value was R1.8 million.
+                </p>
+
+                <p>
+                    <strong>— Umgeni-UThukela Water</strong>
+                </p>
 
             </div>
 
-        </section>
+        </div>
+
+    </div>
+
+</section>
 
 
-    </main>
+
+      
+<!-- FINAL CTA -->
+<section class="final-cta">
+
+    <div class="final-cta-bg">
+        <img src="assets/images/marquee-aerial-03.webp"
+             alt="Event infrastructure by Madunge Events and Projects">
+    </div>
+
+    <div class="final-cta-overlay"></div>
+
+    <div class="final-cta-content">
+
+        <span class="eyebrow reveal">
+            Your project starts here
+        </span>
+
+        <h2 class="reveal">
+            Let's bring your
+            <em>vision to life.</em>
+        </h2>
+
+        <p class="reveal">
+            Planning an event, hiring infrastructure or coordinating
+            a complex project? Speak to our team about your requirements.
+        </p>
+
+        <a href="contact.html" class="cta-button reveal">
+            Discuss your project
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+        <a href="https://wa.me/27837638244?text=Hello%20Madunge%20Events%20and%20Projects.%20I%20would%20like%20to%20enquire%20about%20your%20services."
+           class="cta-button reveal"
+           target="_blank"
+           rel="noopener noreferrer"
+           style="margin-top:14px;">
+
+            Enquire on WhatsApp
+            <i class="fa-brands fa-whatsapp"></i>
+
+        </a>
+
+    </div>
+
+</section>
+
 
 
 
@@ -778,86 +879,151 @@
 
     <footer class="footer">
 
-        <div class="container">
+       
+<div class="footer-top">
 
-            <div class="footer-top">
+    <div class="footer-brand">
 
-                <div class="footer-brand">
+        <span class="footer-logo">MADUNGE</span>
 
-                    <span class="footer-logo">
-                        MADUNGE
-                    </span>
+        <p>Events & Projects</p>
 
-                    <p>
-                        Events & Projects
-                    </p>
+        <p>
+            One accountable partner for events,
+            infrastructure and project delivery.
+        </p>
 
-                </div>
+        <p>
+            Proudly South African. 100% Black-owned.
+        </p>
 
+    </div>
 
-                <div class="footer-links">
+    <div class="footer-links">
 
-                    <div>
-
-                        <span class="footer-heading">
-                            Explore
-                        </span>
-
-                        <a href="about.html">About</a>
-                        <a href="services.html">Services</a>
-                        <a href="portfolio.html">Portfolio</a>
-                        <a href="gallery.html">Gallery</a>
-
-                    </div>
-
-
-                    <div>
-
-                        <span class="footer-heading">
-                            Connect
-                        </span>
-
-                        <a href="contact.html">Contact</a>
-
-                        <!-- Replace # with official social links -->
-                       <a href="https://www.instagram.com/madungeevents/"
-   target="_blank"
-   rel="noopener noreferrer">
-    Instagram
-</a>
-
-<a href="https://www.facebook.com/367546593577788"
-   target="_blank"
-   rel="noopener noreferrer">
-    Facebook
-</a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="footer-bottom">
-
-                <p>
-                    © <span id="currentYear"></span>
-                    Madunge Events & Projects.
-                </p>
-
-                <p>
-                    Durban • South Africa
-                </p>
-
-            </div>
-
+        <div>
+            <span class="footer-heading">Explore</span>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
         </div>
+
+        <div>
+            <span class="footer-heading">Contact</span>
+
+            <a href="tel:+27837638244">083 763 8244</a>
+
+            <a href="mailto:admin@madunge.co.za">
+                General Enquiries
+            </a>
+
+            <a href="mailto:sales@madunge.co.za">
+                Sales Enquiries
+            </a>
+
+            <a href="https://wa.me/27837638244"
+               target="_blank"
+               rel="noopener noreferrer">
+                WhatsApp Us
+            </a>
+        </div>
+
+        <div>
+            <span class="footer-heading">Find Us</span>
+
+            <p>
+                Unit 139, 41 Sol Harris Crescent,
+                North Beach, Durban,
+                KwaZulu-Natal, South Africa
+            </p>
+
+            <a href="https://www.instagram.com/madungeevents/"
+               target="_blank"
+               rel="noopener noreferrer">
+                Instagram
+            </a>
+
+            <a href="https://www.facebook.com/367546593577788"
+               target="_blank"
+               rel="noopener noreferrer">
+                Facebook
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="footer-bottom">
+
+    <p>
+        © <span id="currentYear"></span>
+        Madunge Events and Projects.
+    </p>
+
+    <p>
+        Company Registration: 2005/009195/23
+    </p>
+
+</div>
+
 
     </footer>
 
 
     <script src="js/main.js"></script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const slider = document.querySelector(
+        ".featured-photography .featured-photo-grid"
+    );
+
+    if (!slider) return;
+
+    let timer;
+
+    function startAutoScroll() {
+        stopAutoScroll();
+
+        timer = setInterval(function () {
+            const maxScroll = slider.scrollWidth - slider.clientWidth;
+
+            if (maxScroll <= 5) return;
+
+            if (slider.scrollLeft >= maxScroll - 5) {
+                slider.scrollTo({ left: 0, behavior: "smooth" });
+            } else {
+                const firstPhoto = slider.querySelector(".featured-photo");
+                const gap = 18;
+                const step = firstPhoto
+                    ? firstPhoto.getBoundingClientRect().width + gap
+                    : slider.clientWidth;
+
+                slider.scrollBy({ left: step, behavior: "smooth" });
+            }
+        }, 3500);
+    }
+
+    function stopAutoScroll() {
+        clearInterval(timer);
+    }
+
+    slider.addEventListener("mouseenter", stopAutoScroll);
+    slider.addEventListener("mouseleave", startAutoScroll);
+    slider.addEventListener("touchstart", stopAutoScroll, { passive: true });
+    slider.addEventListener("touchend", startAutoScroll, { passive: true });
+
+    startAutoScroll();
+});
+</script>
+
+
+
+
 
 </body>
 </html>
