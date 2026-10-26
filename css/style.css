@@ -7594,3 +7594,175 @@ body {
         padding: 22px 6%;
     }
 }
+
+
+/* =========================================================
+   GALLERY VIDEO SHOWCASE
+   ========================================================= */
+.gallery-video-section {
+    padding: 90px 6%;
+    background: var(--ivory);
+}
+.gallery-video-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 28px;
+    margin: 18px 0 34px;
+}
+.gallery-video-heading > p {
+    max-width: 420px;
+    line-height: 1.8;
+    opacity: .75;
+}
+.gallery-video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+.gallery-video-card {
+    min-width: 0;
+    margin: 0;
+    background: var(--white);
+    overflow: hidden;
+}
+.gallery-video-card video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background: var(--black);
+}
+.gallery-video-card figcaption {
+    padding: 15px 18px;
+    color: var(--black);
+    font-family: var(--serif);
+    font-size: 1.15rem;
+}
+@media (max-width: 700px) {
+    .gallery-video-heading {
+        display: block;
+    }
+    .gallery-video-heading > p {
+        margin-top: 14px;
+    }
+    .gallery-video-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+/* Keep custom-select choices visible and scrollable on small screens. */
+.custom-select {
+    position: relative;
+}
+.custom-select-menu {
+    display: block;
+    max-height: min(55vh, 360px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+}
+.custom-select-menu button {
+    min-height: 44px;
+}
+
+
+/* FOOTER LAYOUT FIX — keep the brand and navigation in separate columns. */
+.footer > .container {
+    width: min(100% - 64px, 1400px);
+    margin-inline: auto;
+}
+.footer-top {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.5fr);
+    align-items: start;
+    gap: clamp(32px, 5vw, 80px);
+    padding-bottom: 64px;
+}
+.footer-brand {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+.footer-brand > p:not(:first-of-type) {
+    max-width: 420px;
+    line-height: 1.8;
+    letter-spacing: normal;
+    text-transform: none;
+    font-size: 12px;
+    color: rgba(255,255,255,.65);
+}
+.footer-links {
+    min-width: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(18px, 3vw, 44px);
+    align-self: start;
+}
+.footer-links > div {
+    min-width: 0;
+}
+.footer-links a,
+.footer-links p {
+    overflow-wrap: anywhere;
+}
+@media (max-width: 900px) {
+    .footer-top {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 38px;
+    }
+    .footer-links {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+@media (max-width: 600px) {
+    .footer > .container {
+        width: calc(100% - 36px);
+    }
+    .footer-top {
+        padding: 50px 0 40px;
+        gap: 32px;
+    }
+    .footer-logo {
+        font-size: clamp(44px, 12vw, 64px);
+    }
+    .footer-links {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px 18px;
+    }
+    .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+        padding: 22px 0;
+        line-height: 1.8;
+    }
+}
+
+
+/* Final footer and contact dropdown corrections */
+.footer-logo {
+    white-space: nowrap !important;
+    font-size: clamp(42px, 5.2vw, 76px) !important;
+    letter-spacing: .035em !important;
+    line-height: 1 !important;
+    max-width: 100%;
+}
+@media (max-width: 600px) {
+    .footer-logo { font-size: clamp(39px, 11.5vw, 60px) !important; letter-spacing: .025em !important; }
+}
+/* Keep both custom enquiry dropdowns dark with readable white options. */
+.custom-select-menu {
+    background: #151515 !important;
+    border: 1px solid rgba(255,255,255,.12);
+    color: #fff !important;
+}
+.custom-select-menu button {
+    background-color: #151515 !important;
+    color: rgba(255,255,255,.86) !important;
+}
+.custom-select-menu button:hover,
+.custom-select-menu button:focus-visible {
+    background-color: #292929 !important;
+    color: #fff !important;
+}
+.custom-select-menu button.selected { color: #e4c58a !important; }

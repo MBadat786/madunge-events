@@ -453,87 +453,62 @@ window.addEventListener("load", () => {
    CUSTOM SELECT DROPDOWNS
    ========================================================= */
 
-const customSelects =
-    document.querySelectorAll(".custom-select");
+/* =========================================================
+   CUSTOM SELECT DROPDOWNS
+   ========================================================= */
+document.querySelectorAll(".custom-select").forEach(select => {
+    const trigger = select.querySelector(".custom-select-trigger");
+    const triggerText = trigger?.querySelector("span");
+    const options = select.querySelectorAll(".custom-select-menu button");
+    const hiddenInput = document.getElementById(select.dataset.input);
 
-customSelects.forEach(select => {
+    if (!trigger || !triggerText || !hiddenInput) return;
 
-    const trigger =
-        select.querySelector(".custom-select-trigger");
-
-    const triggerText =
-        trigger.querySelector("span");
-
-    const options =
-        select.querySelectorAll(".custom-select-menu button");
-
-    const inputId =
-        select.dataset.input;
-
-    const hiddenInput =
-        document.getElementById(inputId);
-
-
-    /* OPEN / CLOSE */
+    trigger.setAttribute("aria-haspopup", "listbox");
+    trigger.setAttribute("aria-expanded", "false");
 
     trigger.addEventListener("click", event => {
-
+        event.preventDefault();
         event.stopPropagation();
 
-        customSelects.forEach(otherSelect => {
-
-            if (otherSelect !== select) {
-                otherSelect.classList.remove("open");
+        document.querySelectorAll(".custom-select").forEach(other => {
+            if (other !== select) {
+                other.classList.remove("open");
+                other.querySelector(".custom-select-trigger")?.setAttribute("aria-expanded", "false");
             }
-
         });
 
-        select.classList.toggle("open");
-
+        const isOpen = select.classList.toggle("open");
+        trigger.setAttribute("aria-expanded", String(isOpen));
     });
-
-
-    /* SELECT OPTION */
 
     options.forEach(option => {
-
+        option.setAttribute("role", "option");
         option.addEventListener("click", event => {
-
+            event.preventDefault();
             event.stopPropagation();
 
-            const value =
-                option.dataset.value;
+            const value = option.dataset.value;
+            hiddenInput.value = value;
+            triggerText.textContent = value;
 
-            hiddenInput.value =
-                value;
-
-            triggerText.textContent =
-                value;
-
-
-            options.forEach(item =>
-                item.classList.remove("selected")
-            );
-
-            option.classList.add("selected");
+            options.forEach(item => {
+                item.classList.toggle("selected", item === option);
+                item.setAttribute("aria-selected", String(item === option));
+            });
 
             select.classList.remove("open");
-
+            trigger.setAttribute("aria-expanded", "false");
+            hiddenInput.dispatchEvent(new Event("change", { bubbles: true }));
         });
-
     });
-
 });
 
-
-/* CLOSE WHEN CLICKING OUTSIDE */
-
 document.addEventListener("click", () => {
-
-    customSelects.forEach(select =>
-        select.classList.remove("open")
-    );
-
+    document.querySelectorAll(".custom-select.open").forEach(select => {
+        select.classList.remove("open");
+        select.querySelector(".custom-select-trigger")?.setAttribute("aria-expanded", "false");
+    });
 });
 
 
