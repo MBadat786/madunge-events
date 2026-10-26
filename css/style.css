@@ -7737,3 +7737,32 @@ body {
         line-height: 1.8;
     }
 }
+
+
+/* Final footer and contact dropdown corrections */
+.footer-logo {
+    white-space: nowrap !important;
+    font-size: clamp(42px, 5.2vw, 76px) !important;
+    letter-spacing: .035em !important;
+    line-height: 1 !important;
+    max-width: 100%;
+}
+@media (max-width: 600px) {
+    .footer-logo { font-size: clamp(39px, 11.5vw, 60px) !important; letter-spacing: .025em !important; }
+}
+/* Keep both custom enquiry dropdowns dark with readable white options. */
+.custom-select-menu {
+    background: #151515 !important;
+    border: 1px solid rgba(255,255,255,.12);
+    color: #fff !important;
+}
+.custom-select-menu button {
+    background-color: #151515 !important;
+    color: rgba(255,255,255,.86) !important;
+}
+.custom-select-menu button:hover,
+.custom-select-menu button:focus-visible {
+    background-color: #292929 !important;
+    color: #fff !important;
+}
+.custom-select-menu button.selected { color: #e4c58a !important; }
