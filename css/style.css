@@ -7665,3 +7665,75 @@ body {
 .custom-select-menu button {
     min-height: 44px;
 }
+
+
+/* FOOTER LAYOUT FIX — keep the brand and navigation in separate columns. */
+.footer > .container {
+    width: min(100% - 64px, 1400px);
+    margin-inline: auto;
+}
+.footer-top {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.5fr);
+    align-items: start;
+    gap: clamp(32px, 5vw, 80px);
+    padding-bottom: 64px;
+}
+.footer-brand {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+.footer-brand > p:not(:first-of-type) {
+    max-width: 420px;
+    line-height: 1.8;
+    letter-spacing: normal;
+    text-transform: none;
+    font-size: 12px;
+    color: rgba(255,255,255,.65);
+}
+.footer-links {
+    min-width: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(18px, 3vw, 44px);
+    align-self: start;
+}
+.footer-links > div {
+    min-width: 0;
+}
+.footer-links a,
+.footer-links p {
+    overflow-wrap: anywhere;
+}
+@media (max-width: 900px) {
+    .footer-top {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 38px;
+    }
+    .footer-links {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+@media (max-width: 600px) {
+    .footer > .container {
+        width: calc(100% - 36px);
+    }
+    .footer-top {
+        padding: 50px 0 40px;
+        gap: 32px;
+    }
+    .footer-logo {
+        font-size: clamp(44px, 12vw, 64px);
+    }
+    .footer-links {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px 18px;
+    }
+    .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+        padding: 22px 0;
+        line-height: 1.8;
+    }
+}
